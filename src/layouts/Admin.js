@@ -11,7 +11,7 @@ import sidebarImage from "assets/img/sidebar-3.jpg";
 function Admin() {
   const [image, setImage] = React.useState(sidebarImage);
   const [color, setColor] = React.useState("black");
-  const [hasImage, setHasImage] = React.useState(false);  // Change side bar image toggle
+  const [hasImage, setHasImage] = React.useState(false); // Change side bar image toggle
   const location = useLocation();
   const mainPanel = React.useRef(null);
   const getRoutes = (routes) => {
@@ -49,12 +49,11 @@ function Admin() {
         <div className="main-panel" ref={mainPanel}>
           <AdminNavbar />
           <div className="content">
-            <Switch>{getRoutes(routes)}</Switch>
+            <Route>{getRoutes(routes)}</Route>
           </div>
           <Footer />
         </div>
       </div>
-
     </>
   );
 }
